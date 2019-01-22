@@ -1,0 +1,6 @@
+framework module Pods_Tli_App {
+  umbrella header "Pods-Tli App-umbrella.h"
+
+  export *
+  module * { export * }
+}
