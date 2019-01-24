@@ -13,7 +13,23 @@ target 'Tli App' do
 
   pod 'XLPagerTabStrip', '~> 8.0'
 
+  pod 'TwicketSegmentedControl'
   
+  pod 'McPicker'
+  
+  #library for download cache images
+  pod 'Kingfisher', '~> 4.0'
+  
+  #profile circular imageview
+  pod 'SwiftyAvatar', '~> 1.1'
+  
+  #Like Button
+  pod 'WCLShineButton'
+  
+  pod 'InstantSearchVoiceOverlay', '~> 1.0.0-beta'
+
+  pod 'TesseractOCRiOS'
+
 
   use_frameworks!
 

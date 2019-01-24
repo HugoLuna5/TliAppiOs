@@ -81,13 +81,20 @@ PODS:
   - GoogleUtilities/UserDefaults (5.3.7):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
+  - InstantSearchVoiceOverlay (1.0.0-beta2)
+  - Kingfisher (4.10.1)
   - leveldb-library (1.20)
+  - McPicker (2.0.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
+  - SwiftyAvatar (1.1.3)
+  - TesseractOCRiOS (5.0.1)
+  - TwicketSegmentedControl (0.1.2)
+  - WCLShineButton (1.0.7)
   - XLPagerTabStrip (8.1.1)
 
 DEPENDENCIES:
@@ -96,6 +103,13 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/RemoteConfig
   - Firebase/Storage
+  - InstantSearchVoiceOverlay (~> 1.0.0-beta)
+  - Kingfisher (~> 4.0)
+  - McPicker
+  - SwiftyAvatar (~> 1.1)
+  - TesseractOCRiOS
+  - TwicketSegmentedControl
+  - WCLShineButton
   - XLPagerTabStrip (~> 8.0)
 
 SPEC REPOS:
@@ -113,9 +127,16 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
+    - InstantSearchVoiceOverlay
+    - Kingfisher
     - leveldb-library
+    - McPicker
     - nanopb
     - Protobuf
+    - SwiftyAvatar
+    - TesseractOCRiOS
+    - TwicketSegmentedControl
+    - WCLShineButton
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
@@ -132,11 +153,18 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  InstantSearchVoiceOverlay: c8fceafa7adac3b0d62e34aab4ad76a6da4fd4b3
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  McPicker: 1d11ad8c07c337a16dd9397e45f321125304cbb0
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  SwiftyAvatar: 33aecda825c91851cac2aabd06b33f3698b2414c
+  TesseractOCRiOS: 2c189465f86abb030d0c5141c90da9705b647854
+  TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
+  WCLShineButton: d8b979b6f6f9f6709f9e241e6e1a4712a1a9b36b
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: ad8bcd148f94ef1261a7f022a83f6dd4a980e89e
+PODFILE CHECKSUM: b9fabb4bea1f39620a62e477c02ef5b045332c20
 
 COCOAPODS: 1.5.3

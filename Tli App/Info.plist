@@ -2,8 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Debemos acceder a la galeria, para poder utilizar la traducción por imagenes</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Debemos acceder a la camara, para poder utilizar la traducción por imagenes</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Debemos acceder a está función, para acceder a tu microfono, y ofrecer el servicio de reconocimiento de voz</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Debemos acceder a esta funcion, para ofrecerte el rconocimineto de voz</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>es_MX</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

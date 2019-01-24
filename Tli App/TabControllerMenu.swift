@@ -12,8 +12,6 @@ import XLPagerTabStrip
 
 class TabControllerMenu:ButtonBarPagerTabStripViewController {
     
-    @IBOutlet weak var shadowView: UIView!
-    
     
     let backgroundTab = UIColor(red: 1/255.0, green: 188/255.0, blue: 212/255.0, alpha: 1.0)
     
@@ -47,9 +45,14 @@ class TabControllerMenu:ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
         
-      
+        let comunidad = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "comunidad")
+        let traductor = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "traductor")
+        let juegos = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "juegos")
         
-        return [Comunidad(), Traductor(), Juegos()]
+        
+        return [comunidad, traductor, juegos]
+        
+        
     }
     
  
