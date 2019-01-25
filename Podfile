@@ -31,9 +31,14 @@ target 'Tli App' do
   #Like Button
   pod 'WCLShineButton'
   
+  #Voice recognition convert to text
   pod 'InstantSearchVoiceOverlay', '~> 1.0.0-beta'
-
+  
+  #Image text recognition
   pod 'TesseractOCRiOS'
+  
+  #keyboard
+  pod 'IQKeyboardManagerSwift'
 
 
   use_frameworks!

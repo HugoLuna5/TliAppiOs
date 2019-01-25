@@ -8,15 +8,30 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import IQKeyboardManagerSwift
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var firebaseRef: DatabaseReference!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       
+        //opciones de teclado
+        IQKeyboardManager.shared.enable = true
+        
+        //Inicializar firebase
         FirebaseApp.configure()
+        
+        //persistencia de datos
+        Database.database().isPersistenceEnabled = true
+        firebaseRef = Database.database().reference()
+        
+        
+        
 
         return true
     }
