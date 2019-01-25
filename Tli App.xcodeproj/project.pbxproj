@@ -13,6 +13,10 @@
 		417A593A2194A760001DCA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A59392194A760001DCA46 /* Assets.xcassets */; };
 		417A593D2194A760001DCA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417A593B2194A760001DCA46 /* LaunchScreen.storyboard */; };
 		41AB113121F983220088BDC5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 41AB113021F983220088BDC5 /* tessdata */; };
+		41AB113321FA632E0088BDC5 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AB113221FA632E0088BDC5 /* Feed.swift */; };
+		41AB113621FA6D9E0088BDC5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AB113521FA6D9D0088BDC5 /* LoginController.swift */; };
+		41AB113C21FA8AC50088BDC5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AB113B21FA8AC50088BDC5 /* Utils.swift */; };
+		41AB113E21FAACC20088BDC5 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AB113D21FAACC20088BDC5 /* SignUpController.swift */; };
 		41D6600C21F07E9300C57CE8 /* TabControllerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6600B21F07E9300C57CE8 /* TabControllerMenu.swift */; };
 		41D6600F21F0801800C57CE8 /* Comunidad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6600E21F0801800C57CE8 /* Comunidad.swift */; };
 		41D6601121F0853A00C57CE8 /* Traductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6601021F0853A00C57CE8 /* Traductor.swift */; };
@@ -32,6 +36,10 @@
 		417A593C2194A760001DCA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		417A593E2194A760001DCA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41AB113021F983220088BDC5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = ../../../tessdata; sourceTree = "<group>"; };
+		41AB113221FA632E0088BDC5 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		41AB113521FA6D9D0088BDC5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		41AB113B21FA8AC50088BDC5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		41AB113D21FAACC20088BDC5 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		41D6600B21F07E9300C57CE8 /* TabControllerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabControllerMenu.swift; sourceTree = "<group>"; };
 		41D6600E21F0801800C57CE8 /* Comunidad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comunidad.swift; sourceTree = "<group>"; };
 		41D6601021F0853A00C57CE8 /* Traductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traductor.swift; sourceTree = "<group>"; };
@@ -101,9 +109,19 @@
 			path = "Tli App";
 			sourceTree = "<group>";
 		};
+		41AB113421FA6D8B0088BDC5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				41AB113521FA6D9D0088BDC5 /* LoginController.swift */,
+				41AB113D21FAACC20088BDC5 /* SignUpController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		41B4E16C219563570076EC07 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				41AB113421FA6D8B0088BDC5 /* Login */,
 				416CA10921F926BD00F83F38 /* Perfil */,
 				41D6600D21F07FE700C57CE8 /* Tabs */,
 			);
@@ -127,6 +145,7 @@
 				41D9790721F84D4E00708ECC /* FeedData.swift */,
 				41D9790B21F84FA900708ECC /* Palabra.swift */,
 				41D9790D21F8504300708ECC /* CommentData.swift */,
+				41AB113221FA632E0088BDC5 /* Feed.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -134,6 +153,7 @@
 		41DD12F021F9306700B8ABC2 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				41AB113B21FA8AC50088BDC5 /* Utils.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -239,8 +259,10 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/InstantSearchVoiceOverlay/InstantSearchVoiceOverlay.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialTextField/MaterialTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/McPicker/McPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyAvatar/SwiftyAvatar.framework",
 				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
 				"${BUILT_PRODUCTS_DIR}/TwicketSegmentedControl/TwicketSegmentedControl.framework",
@@ -257,8 +279,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InstantSearchVoiceOverlay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/McPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAvatar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwicketSegmentedControl.framework",
@@ -301,7 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41AB113E21FAACC20088BDC5 /* SignUpController.swift in Sources */,
+				41AB113621FA6D9E0088BDC5 /* LoginController.swift in Sources */,
 				417A59332194A75E001DCA46 /* AppDelegate.swift in Sources */,
+				41AB113321FA632E0088BDC5 /* Feed.swift in Sources */,
 				41D9790E21F8504300708ECC /* CommentData.swift in Sources */,
 				41D6601321F085A700C57CE8 /* Juegos.swift in Sources */,
 				416CA10B21F926D600F83F38 /* PerfilViewController.swift in Sources */,
@@ -310,6 +337,7 @@
 				41D6600C21F07E9300C57CE8 /* TabControllerMenu.swift in Sources */,
 				41D6601121F0853A00C57CE8 /* Traductor.swift in Sources */,
 				41D9790C21F84FA900708ECC /* Palabra.swift in Sources */,
+				41AB113C21FA8AC50088BDC5 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class PerfilViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -27,4 +27,32 @@ class PerfilViewController: UIViewController {
     }
     */
 
+    
+    @IBAction func btnCloseSession(_ sender: Any) {
+        
+        
+        if(Auth.auth().currentUser != nil){
+            
+            do {
+                //try mAuth.signOut()
+                try Auth.auth().signOut()
+                
+                
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let miVistaDos = storyBoard.instantiateViewController(withIdentifier: "loginController") as! LoginController
+                
+                self.present(miVistaDos, animated:true, completion:nil)
+                
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+            
+        }
+        
+        
+        
+    }
+    
+    
 }

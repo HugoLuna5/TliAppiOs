@@ -4,6 +4,11 @@
 target 'Tli App' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   
+  
+  pod 'MaterialTextField', '~> 1.0'
+  pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
+
+  
   #Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Database'
