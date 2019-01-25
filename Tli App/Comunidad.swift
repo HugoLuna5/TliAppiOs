@@ -9,7 +9,6 @@
 import Foundation
 import XLPagerTabStrip
 import WCLShineButton
-import SwiftyAvatar
 import FirebaseDatabase
 import FirebaseAuth
 import Kingfisher
@@ -26,11 +25,10 @@ var likeGlobal = false
 class CustomCellFeed: UITableViewCell {
     
     
-    @IBOutlet weak var photoUser: SwiftyAvatar!
+    @IBOutlet weak var photoUser: UIImageView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var imagen: UIImageView!
-    @IBOutlet weak var titulo: UILabel!
     @IBOutlet weak var desc: UITextView!
     
     @IBOutlet weak var btn: WCLShineButton!
@@ -54,10 +52,19 @@ class CustomCellFeed: UITableViewCell {
         photoUser.isUserInteractionEnabled = true
         //tapGesture.delegate = ViewController()
         
+        
+        photoUser.layer.borderWidth = 1
+        photoUser.layer.masksToBounds = false
+        photoUser.layer.borderColor = UIColor.white.cgColor
+        photoUser.layer.cornerRadius = photoUser.frame.height/2
+        photoUser.clipsToBounds = true
+        
+        
     }
     @objc func tapEdit(_ sender: UITapGestureRecognizer) {
         delegate?.TapGestureFeed(self)
         print("Click gesture")
+        print("Click photo user")
     }
     
     
@@ -301,10 +308,7 @@ class Comunidad: UIViewController, IndicatorInfoProvider, UITableViewDataSource,
     
     
     
-    @objc func handleTap(gestureRecognizer: UIGestureRecognizer) {
-        self.performSegue(withIdentifier: "senderActionEcomentes", sender: self)
-        
-    }
+   
     
     
     
@@ -372,7 +376,7 @@ class Comunidad: UIViewController, IndicatorInfoProvider, UITableViewDataSource,
             self.present(alert, animated: true)
         }else{
             
-            self.performSegue(withIdentifier: "senderFeedSegue", sender: self)
+            //self.performSegue(withIdentifier: "senderFeedSegue", sender: self)
             
         }
     }
@@ -409,7 +413,7 @@ class Comunidad: UIViewController, IndicatorInfoProvider, UITableViewDataSource,
         guard let tappedIndexPath = tableview.indexPath(for: sender) else { return }
         
         userIDProfileFeed = feeds.reversed()[tappedIndexPath.row].uid
-        self.performSegue(withIdentifier: "senderUserProfileFeedSegue", sender: self)
+        //self.performSegue(withIdentifier: "senderUserProfileFeedSegue", sender: self)
     }
     
     

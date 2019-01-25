@@ -8,14 +8,68 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
+import Kingfisher
+
 class PerfilViewController: UIViewController {
 
+    
+    @IBOutlet weak var photoUser: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+       
+        configureCIrcleImage()
+        loadData()
     }
     
+    
+    func configureCIrcleImage(){
+        
+        photoUser.layer.borderWidth = 1
+        photoUser.layer.masksToBounds = false
+        photoUser.layer.borderColor = UIColor.white.cgColor
+        photoUser.layer.cornerRadius = photoUser.frame.height/2
+        photoUser.clipsToBounds = true
+    }
+    
+    
+    
+    func loadData(){
+        var mDatabase: DatabaseReference!
+       
+        
+        mDatabase = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
+        
+        mDatabase.observe(DataEventType.value, with: { (snapshot) in
+            let user = snapshot.value as? [String : AnyObject] ?? [:]
+            
+            self.nameLabel.text = (user["name"]  as! String)
+            
+            if user["photo"] as! String != "default" {
+                
+                let userPhoto = URL(string: user["photo"] as! String)
+                self.photoUser.kf.setImage(with: userPhoto)
+                
+            }else{
+                
+                let urlPhoto = URL(string: "https://firebasestorage.googleapis.com/v0/b/ecomentes-1f3d7.appspot.com/o/default-user.png?alt=media&token=0ff53569-3354-466f-a5b8-3df07a56053f")
+                
+                
+                self.photoUser.kf.setImage(with: urlPhoto)
+            }
+            
+            
+        })
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -40,7 +94,7 @@ class PerfilViewController: UIViewController {
                 
                 
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let miVistaDos = storyBoard.instantiateViewController(withIdentifier: "loginController") as! LoginController
+                let miVistaDos = storyBoard.instantiateViewController(withIdentifier: "uiLoginMain") as! UINavigationController
                 
                 self.present(miVistaDos, animated:true, completion:nil)
                 

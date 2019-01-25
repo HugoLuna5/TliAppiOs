@@ -94,7 +94,6 @@ PODS:
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
   - SCLAlertView (0.8.1)
-  - SwiftyAvatar (1.1.3)
   - TesseractOCRiOS (5.0.1)
   - TwicketSegmentedControl (0.1.2)
   - WCLShineButton (1.0.7)
@@ -112,7 +111,6 @@ DEPENDENCIES:
   - MaterialTextField (~> 1.0)
   - McPicker
   - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`)
-  - SwiftyAvatar (~> 1.1)
   - TesseractOCRiOS
   - TwicketSegmentedControl
   - WCLShineButton
@@ -141,7 +139,6 @@ SPEC REPOS:
     - McPicker
     - nanopb
     - Protobuf
-    - SwiftyAvatar
     - TesseractOCRiOS
     - TwicketSegmentedControl
     - WCLShineButton
@@ -179,12 +176,11 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SCLAlertView: 9fea8ac145c0bd4989ef6abe1d3859b48f458986
-  SwiftyAvatar: 33aecda825c91851cac2aabd06b33f3698b2414c
   TesseractOCRiOS: 2c189465f86abb030d0c5141c90da9705b647854
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
   WCLShineButton: d8b979b6f6f9f6709f9e241e6e1a4712a1a9b36b
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: deed84637fdd18d74f21d468d437ecd2c11fef52
+PODFILE CHECKSUM: de2d0ffe0c0157afec38f6e85a640888e535bc2f
 
 COCOAPODS: 1.5.3

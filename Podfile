@@ -24,10 +24,7 @@ target 'Tli App' do
   
   #library for download cache images
   pod 'Kingfisher', '~> 4.0'
-  
-  #profile circular imageview
-  pod 'SwiftyAvatar', '~> 1.1'
-  
+    
   #Like Button
   pod 'WCLShineButton'
   
